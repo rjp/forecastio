@@ -120,7 +120,7 @@ type minutely struct {
 	Data    []*minuteData `json:"data"`
 }
 
-type hourData struct {
+type HourData struct {
 	TimeUnix                 int64 `json:"time"`
 	Time                     time.Time
 	Summary                  string  `json:"summary"`
@@ -134,16 +134,18 @@ type hourData struct {
 	Humidity                 float64 `json:"humidity"`
 	WindSpeed                float64 `json:"windSpeed"`
 	WindBearing              float64 `json:"windBearing"`
+	WindGust                 float64 `json:"windGust"`
 	Visibility               float64 `json:"visibility"`
 	CloudCover               float64 `json:"cloudCover"`
 	Pressure                 float64 `json:"pressure"`
 	Ozone                    float64 `json:"ozone"`
+	UVIndex                  float64 `json:"uvIndex"`
 }
 
 type hourly struct {
 	Summary string      `json:"summary"`
 	Icon    string      `json:"icon"`
-	Data    []*hourData `json:"data"`
+	Data    []*HourData `json:"data"`
 }
 
 type dayData struct {
